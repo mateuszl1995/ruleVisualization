@@ -21,7 +21,7 @@ public class DemoResource {
 		String path = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		String decodedPath = URLDecoder.decode(path, "UTF-8");
 		File folder = new File(decodedPath).getParentFile();
-		folder = new File(folder, "data");
+		folder = new File(folder, "datasets");
 		
 		JsonArray list = new JsonArray();
         for (final File f : folder.listFiles())
@@ -41,7 +41,7 @@ public class DemoResource {
 			String path = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 			String decodedPath = URLDecoder.decode(path, "UTF-8");
 			root = new File(decodedPath).getParentFile();
-			root = new File(root, "data");
+			root = new File(root, "datasets");
 			
 			f = new File(new File(root, demoname), filename);
 			if (!f.getCanonicalPath().startsWith(root.getCanonicalPath()))
