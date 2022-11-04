@@ -6,7 +6,7 @@ You can find detailed description [here, on frontend application website](https:
 ### Development
 You can setup port in `application.properties` file.
 ```
-gradle run
+gradle bootRun
 ```
 ### Production
 ```
